@@ -150,6 +150,7 @@ button { font: inherit; color: inherit; }
 }
 .section-sub { margin: 16px 0 0; color: var(--muted); }
 h1, h2, h3 { text-wrap: balance; }
+.nowrap { white-space: nowrap; }
 
 /* ---------- Viewer 3D ---------- */
 .product { padding: 96px var(--gutter) 64px; }
@@ -304,6 +305,37 @@ h1, h2, h3 { text-wrap: balance; }
   .panel { left: 12px; right: 12px; bottom: 12px; padding: 16px 18px; }
   .panel-title { font-size: 18px; }
   .panel-text { font-size: 14px; }
+}
+
+/* ---------- Scènes de perte ---------- */
+.scenes { padding: 96px var(--gutter) 32px; }
+.scene-grid {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+.scene { margin: 0; }
+.scene img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 429 / 400;
+  object-fit: cover;
+  border-radius: 20px;
+  background: var(--mist);
+}
+.scene figcaption {
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.scene figcaption span { color: var(--coral); font-size: 12px; letter-spacing: .14em; margin-right: 6px; }
+.scene:nth-child(even) { transform: translateY(32px); }
+.scene.reveal.is-in:nth-child(even) { transform: translateY(32px); }
+@media (max-width: 900px) {
+  .scene-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .scene:nth-child(even), .scene.reveal.is-in:nth-child(even) { transform: none; }
 }
 
 /* ---------- Galerie ---------- */
