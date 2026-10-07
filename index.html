@@ -21,6 +21,7 @@
       <a href="#gourde">La gourde</a>
       <a href="#galerie">Galerie</a>
       <a href="#marque">La marque</a>
+      <a href="#formats">Formats</a>
     </nav>
   </header>
 
@@ -117,6 +118,47 @@
         <li>Haut-parleur intégré</li>
       </ul>
       <p class="brand-slogan reveal">Ne la cherchez plus. <span class="accent">Buvez.</span></p>
+    </section>
+
+    <!-- FORMATS ET PRIX -->
+    <section id="formats" class="formats" aria-labelledby="formats-title">
+      <div class="section-head reveal">
+        <p class="kicker">Formats</p>
+        <h2 id="formats-title">Trois tailles. Une seule idée.</h2>
+        <p class="section-sub">Find Flask existe en 33&nbsp;cl, 50&nbsp;cl et 1&nbsp;L. À partir de 49,90&nbsp;€.</p>
+      </div>
+
+      <ul class="format-grid" role="list">
+        <li class="format reveal">
+          <svg class="format-bottle" viewBox="0 0 60 120" aria-hidden="true" style="--h:.62"><use href="#bottle-outline"/></svg>
+          <p class="format-size">33&nbsp;cl</p>
+          <p class="format-use">Pour le sac, le cours, la pause.</p>
+          <p class="format-price">49,90&nbsp;€</p>
+        </li>
+        <li class="format format--featured reveal">
+          <svg class="format-bottle" viewBox="0 0 60 120" aria-hidden="true" style="--h:.8"><use href="#bottle-outline"/></svg>
+          <p class="format-size">50&nbsp;cl</p>
+          <p class="format-use">Le format de tous les jours.</p>
+          <p class="format-price">59,90&nbsp;€</p>
+        </li>
+        <li class="format reveal">
+          <svg class="format-bottle" viewBox="0 0 60 120" aria-hidden="true" style="--h:1"><use href="#bottle-outline"/></svg>
+          <p class="format-size">1&nbsp;L</p>
+          <p class="format-use">Pour le sport et les longues journées.</p>
+          <p class="format-price">79,90&nbsp;€</p>
+        </li>
+      </ul>
+      <p class="formats-note reveal">Mêmes engagements sur chaque format : localisation, haut-parleur, batterie 1 an, aluminium recyclé, fabriquée en France.</p>
+
+      <!-- Silhouette de gourde réutilisée par les trois cartes -->
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="bottle-outline" viewBox="0 0 60 120">
+          <path d="M23 6h14a2 2 0 0 1 2 2v9H21V8a2 2 0 0 1 2-2z" fill="var(--navy)"/>
+          <path d="M22 17h16v6c0 4 14 9 14 20v66a5 5 0 0 1-5 5H13a5 5 0 0 1-5-5V43c0-11 14-16 14-20z"
+                fill="none" stroke="var(--navy)" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M30 56c-3.3 0-6 2.6-6 5.9 0 4.4 6 10.1 6 10.1s6-5.7 6-10.1c0-3.3-2.7-5.9-6-5.9zm0 8.2a2.3 2.3 0 1 1 0-4.6 2.3 2.3 0 0 1 0 4.6z" fill="var(--coral)"/>
+        </symbol>
+      </svg>
     </section>
 
   </main>
