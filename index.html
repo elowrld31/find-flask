@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find Flask — Ne la cherchez plus. Buvez.</title>
+  <meta name="description" content="Find Flask, la gourde en aluminium recyclé, fabriquée en France, que vous retrouvez depuis votre téléphone.">
+  <link rel="icon" type="image/png" href="assets/logo-ff.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Find Flask, retour en haut">
+      <img src="assets/logo-findflask.png" alt="find flask" width="1249" height="346">
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#gourde">La gourde</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#marque">La marque</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ACCROCHE -->
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="kicker reveal">La gourde qui se retrouve</p>
+      <h1 id="hero-title" class="hero-title reveal">
+        <span>Ne la cherchez plus.</span>
+        <span class="accent">Buvez.</span>
+      </h1>
+      <p class="hero-sub reveal">Aluminium recyclé. Fabriquée en France.<br>Et toujours là où votre téléphone vous dit qu'elle est.</p>
+      <a class="scroll-cue reveal" href="#gourde">
+        <span>Découvrir la gourde</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </section>
+
+    <!-- VIEWER 3D -->
+    <section id="gourde" class="product" aria-labelledby="product-title">
+      <div class="section-head reveal">
+        <p class="kicker">En 3D</p>
+        <h2 id="product-title">Faites-la tourner.</h2>
+        <p class="section-sub">Glissez pour la tourner, pincez ou faites défiler pour zoomer. Les boutons vous emmènent sur chaque détail.</p>
+      </div>
+
+      <div class="stage-wrap reveal">
+        <div class="features features--left" role="group" aria-label="Détails du produit">
+          <button class="feature" type="button" data-feature="locate" aria-pressed="false">
+            <span class="feature-num">01</span>
+            <span class="feature-label">Localisation</span>
+          </button>
+          <button class="feature" type="button" data-feature="speaker" aria-pressed="false">
+            <span class="feature-num">02</span>
+            <span class="feature-label">Haut-parleur</span>
+          </button>
+        </div>
+
+        <div class="stage" id="stage">
+          <canvas id="flask-canvas" aria-label="Modèle 3D interactif de la gourde Find Flask"></canvas>
+          <div class="markers" id="markers" aria-hidden="true"></div>
+
+          <div class="stage-ui">
+            <button class="reset" type="button" id="reset-view">Vue d'ensemble</button>
+            <p class="hint" id="hint">Glissez pour tourner</p>
+          </div>
+
+          <div class="panel" id="panel" aria-live="polite">
+            <p class="panel-num" id="panel-num"></p>
+            <h3 class="panel-title" id="panel-title"></h3>
+            <p class="panel-text" id="panel-text"></p>
+          </div>
+
+          <noscript><p class="noscript">Activez JavaScript pour afficher la gourde en 3D.</p></noscript>
+          <p class="fallback" id="fallback" hidden>Votre navigateur ne peut pas afficher la 3D (WebGL indisponible).</p>
+        </div>
+
+        <div class="features features--right" role="group" aria-label="Détails du produit, suite">
+          <button class="feature" type="button" data-feature="battery" aria-pressed="false">
+            <span class="feature-num">03</span>
+            <span class="feature-label">Batterie 1 an</span>
+          </button>
+          <button class="feature" type="button" data-feature="origin" aria-pressed="false">
+            <span class="feature-num">04</span>
+            <span class="feature-label">Made in France</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIE -->
+    <section id="galerie" class="gallery" aria-labelledby="gallery-title">
+      <div class="section-head reveal">
+        <p class="kicker">Galerie</p>
+        <h2 id="gallery-title">Sous tous les angles.</h2>
+        <p class="section-sub">Touchez une vue pour la retrouver dans le modèle 3D.</p>
+      </div>
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Les vues sont générées depuis le modèle 3D par script.js -->
+      </div>
+    </section>
+
+    <!-- MARQUE -->
+    <section id="marque" class="brand-block" aria-labelledby="brand-title">
+      <img class="brand-mark reveal" src="assets/logo-ff.png" alt="" width="296" height="316">
+      <h2 id="brand-title" class="reveal">Une gourde que l'on garde.</h2>
+      <p class="reveal">On perd une gourde en une seconde. On la remplace, encore et encore.
+        Find Flask part d'une idée simple : si elle se retrouve, on la garde. Plus longtemps, plus souvent.</p>
+      <ul class="values reveal" aria-label="Nos engagements">
+        <li>Fabriquée en France</li>
+        <li>Aluminium recyclé</li>
+        <li>Batterie 1 an</li>
+        <li>Haut-parleur intégré</li>
+      </ul>
+      <p class="brand-slogan reveal">Ne la cherchez plus. <span class="accent">Buvez.</span></p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <img src="assets/logo-ff.png" alt="" width="296" height="316">
+    <p>Find Flask — concept de campagne publicitaire.</p>
+  </footer>
+
+  <script src="vendor/three-bundle.js"></script>
+  <script src="assets/logo-ff-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
